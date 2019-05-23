@@ -4,12 +4,8 @@ export default gql`
   mutation likeLyric($id: ID!) {
     likeLyric(id: $id) {
       id
-      title
-      lyrics {
-        id
-        content
-        likes
-      }
+      content
+      likes
     }
   }
 `;

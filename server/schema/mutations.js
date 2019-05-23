@@ -29,13 +29,12 @@ const mutation = new GraphQLObjectType({
       }
     },
     likeLyric: {
-      type: SongType,
+      type: LyricType,
       args: { id: { type: new GraphQLNonNull(GraphQLID) } },
       resolve(parentValue, { id }) {
         return Lyric.findById(id).then(lyric => {
           ++lyric.likes;
-          lyric.save();
-          return Song.findById(lyric.songId);
+          return lyric.save();
         });
       }
     },

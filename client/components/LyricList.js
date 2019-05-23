@@ -21,13 +21,13 @@ class LyricList extends React.Component {
       return (
         <li key={id} className="collection-item">
           {content}
+          <span className="new badge" data-badge-caption="likes">
+            <strong>{likes}</strong>
+          </span>
           <i
             className="material-icons right"
             onClick={() => this.likeLyric(id)}
           >thumb_up</i>
-          <span className="new badge" data-badge-caption="likes">
-            <strong>{likes}</strong>
-          </span>
         </li>
       );
     });

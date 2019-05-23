@@ -22,6 +22,7 @@ class SongCreate extends React.Component {
       variables: { title: this.state.title },
       refetchQueries: [{ query: fetchSongs }]
     }).then(() => {
+      Alert('success', 'Song added successfully');
       hashHistory.push('/');
     }).catch(error => {
       Alert('error', error.message);
