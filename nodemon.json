@@ -1,0 +1,5 @@
+{
+  "env": {
+    "MONGO_URI": "mongodb://michael1:michael1@ds062178.mlab.com:62178/lyrical-graphql-db"
+  }
+}
